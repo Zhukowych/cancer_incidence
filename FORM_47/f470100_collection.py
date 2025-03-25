@@ -57,10 +57,11 @@ for file in os.listdir('.'):
             category_df['nnursing'] = category_data.iloc[:, 14].values      
             category_df["year"] = year
             category_df["category"] = category_title
+
+            dataframes.append(category_df)
         except Exception as ex:
             print(ex)
 
-        dataframes.append(category_df)
 
 
 full_data_frame = pd.concat(dataframes)
